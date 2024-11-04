@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     systems.url = "github:nix-systems/default";
     devenv.url = "github:cachix/devenv";
     nixpkgs-python.url = "github:cachix/nixpkgs-python";
@@ -16,10 +16,6 @@
       forEachSystem = nixpkgs.lib.genAttrs (import systems);
     in
     {
-      # packages = forEachSystem (system: {
-      #   devenv-up = self.devShells.${system}.default.config.procfileScript;
-      # });
-
       devShells = forEachSystem
         (system:
           let
@@ -30,7 +26,6 @@
               inherit inputs pkgs;
               modules = [
                 {
-                  packages = [ pkgs.wget pkgs.tor];
                   languages.python = {
                     enable = true;
                     version = "3.11.3";

@@ -18,7 +18,7 @@
       };
 
     };
-    
+  
     defaultTemplate = self.templates.trivial;
   };
 }

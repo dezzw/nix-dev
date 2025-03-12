@@ -11,6 +11,11 @@
         path = ./python-venv;
         description = "A simple python template supported by devenv";
       };
+      
+      python-uv = {
+        path = ./python-uv;
+        description = "A Python Project managed by python-uv";
+      };
 
       python-debugger = {
         path = ./python-debugger;

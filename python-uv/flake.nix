@@ -29,7 +29,7 @@
                     enable = true;
                     uv = {
                       enable = true;
-                      sync.enablet = true;
+                      sync.enable = true;
                     };
                   };                      
                 }

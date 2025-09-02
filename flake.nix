@@ -22,6 +22,11 @@
         description = "A simple python template with debuggy installed";
       };
 
+      rust-stable = {
+        path = ./rust-stable;
+        description = "A simple rust template supporting stable channel";
+      };
+
     };
   
     defaultTemplate = self.templates.trivial;
